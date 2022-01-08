@@ -31,30 +31,33 @@ const Formulario = ({setNombrePersonaje}) => {
     };
 
     return (
-        <form onSubmit={handleSubmit} className="d-flex flex-row form--app">
-            <input 
-                autoFocus
-                type="text"
-                placeholder="enter character"
-                className="form-control mb-3"
-                value={nombre}
-                onChange={handleChange}
-                name="nombre"
-            />
+        <div className="d-flex flex-row form--app">
+            <form onSubmit={handleSubmit} className="d-flex flex-row">
+                <input 
+                    type="text"
+                    placeholder="enter character"
+                    className="form-control mb-3"
+                    value={nombre}
+                    onChange={handleChange}
+                    name="nombre"
+                />
 
-            <button
-                type="submit"
-                className="btn btn-danger mb-auto"
-            >
-                Search
-            </button>
-            <button
-                className="btn btn-success mb-auto"
-                onClick={reloadPage}
-            >
+                <button
+                    type="submit"
+                    className="btn btn-danger mb-auto"
+                >
+                    Search
+                </button>
+            </form>
+            <a href="/">
+                <button
+                    className="btn btn-success mb-auto"
+                    onClick={reloadPage}
+                >
                 reload
-            </button>
-        </form>
+                </button>
+            </a>
+        </div>
     )
 }
 
