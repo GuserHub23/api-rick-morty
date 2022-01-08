@@ -13,20 +13,20 @@ const Formulario = ({setNombrePersonaje}) => {
         e.preventDefault()
         console.log(nombre)
 
-        if(!nombre.trim()){
+        if(!nombre){
             return Swal.fire({
                 title: 'Error!',
-                text: 'Ingrese un personaje',
+                text: 'Ingrese un personaje valido',
                 icon: 'error',
                 confirmButtonText: 'OK'
             })
-        }
+        };
 
         setNombrePersonaje(nombre.trim().toLowerCase())
         reset(setNombrePersonaje(nombre))
     };
 
-    const reload = () => {
+    const reloadPage = () => {
         window.location.reload(true);
     };
 
@@ -49,10 +49,10 @@ const Formulario = ({setNombrePersonaje}) => {
                 Search
             </button>
             <button
-                className="btn btn-success mb-auto "
-                onClick={reload}
+                className="btn btn-success mb-auto"
+                onClick={reloadPage}
             >
-                Reload
+                reload
             </button>
         </form>
     )

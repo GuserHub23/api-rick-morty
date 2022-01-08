@@ -9,8 +9,6 @@ const PintarDatos = ( {nombrePersonaje} ) => {
 
     const [loading, setLoading] = useState(false);
 
-    const [info, setInfo] = useState({})
-
     useEffect(() => {
         consumirApi(nombrePersonaje)
     }, [nombrePersonaje]);
