@@ -26,12 +26,16 @@ const Formulario = ({setNombrePersonaje}) => {
         reset(setNombrePersonaje(nombre))
     };
 
+    const reload = () => {
+        window.location.reload(true);
+    };
+
     return (
         <form onSubmit={handleSubmit} className="d-flex flex-row form--app">
             <input 
                 autoFocus
                 type="text"
-                placeholder="Ingrese personaje"
+                placeholder="enter character"
                 className="form-control mb-3"
                 value={nombre}
                 onChange={handleChange}
@@ -42,7 +46,13 @@ const Formulario = ({setNombrePersonaje}) => {
                 type="submit"
                 className="btn btn-danger mb-auto"
             >
-                Buscar
+                Search
+            </button>
+            <button
+                className="btn btn-success mb-auto "
+                onClick={reload}
+            >
+                Reload
             </button>
         </form>
     )
