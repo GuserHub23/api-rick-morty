@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+La pagina de este repositorio es https://guser-rickandmorty-api.netlify.app/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
